@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grafico IDH</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+<h1>Gráfico IDH</h1>
+    <form action="/grafidh" METHOD="POST">
+    <label>Caso queira filtrar cidades, digite o número EX:(1 a 213, são 214 cidades nos dados)</label>
+    <input type="text" name="valor">
+    <button type="submit">Filtrar</button>
+</form>
+
+{{mapa|safe}}
+
+
+    {{mapa|safe}}
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfico IDH VS CVLI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+    <h1>Gráfico IDH VS CVLI</h1>
+
+    <form action="/grafcvlivsidh" method="post">
+        <label for="num_estados">Número de Estados:</label>
+        <input type="number" id="num_estados" name="num_estados" value="10">
+        <button type="submit">Gerar Gráfico</button>
+    </form>
+
+    {{mapa|safe}}
+
+</body>
+</html>
